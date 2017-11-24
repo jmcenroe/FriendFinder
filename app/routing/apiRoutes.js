@@ -8,10 +8,10 @@ module.exports = function(app) {
     // API GET Requests
     // When users "visit" a page. 
     // In each of the below cases when a user visits a link, 
-    // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table) 
+    // (ex: localhost:PORT/api/admin...) they are shown a JSON of the data in the table 
     // ---------------------------------------------------------------------------
 
-    app.get('/api/friends', function(req, res) {
+    app.get('/api/data/friends', function(req, res) {
         res.json(friends);
     });
 
@@ -21,12 +21,12 @@ module.exports = function(app) {
     // the JSON is pushed to the appropriate Javascript array
     // ---------------------------------------------------------------------------
 
-    app.post('/api/friends', function(req, res) {
+    app.post('/api/data/friends', function(req, res) {
 
         // "Server" will respond to a user's survey result
         // Then compare those results against every user in the database
         // It will then calculate the difference between each of the numbers 
-        // and the user's numbers.It will then choose the user with the fewest 
+        // and the user's numbers. It will then choose the user with the fewest 
         // differences as the "best friend match."
         // In the case of multiple users with the same result, it will choose the first match.
         // After the test, it will push the user to the database. 
@@ -82,6 +82,5 @@ module.exports = function(app) {
         // Return a JSON with the user's bestMatch. This will be used by the HTML 
         // in the next page. 
         res.json(bestMatch);
-
     });
 }
