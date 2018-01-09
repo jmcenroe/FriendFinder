@@ -1,6 +1,7 @@
 # FriendFinder
 
-Welcome to the Friend Finder application!**
+Welcome to Friend Finder!
+
 Answer a few questions and connect with your most compatible friends
 
 **It's Easy:**
